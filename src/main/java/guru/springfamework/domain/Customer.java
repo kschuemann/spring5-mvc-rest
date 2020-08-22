@@ -1,5 +1,7 @@
 package guru.springfamework.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +16,8 @@ public class Customer {
 
     String fistName;
     String lastName;
+
+    String customerUrl;
 
     public String getFistName() {
         return fistName;
@@ -37,5 +41,13 @@ public class Customer {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCustomerUrl() {
+        return customerUrl;
+    }
+
+    public void setCustomerUrl(String customerUrl) {
+        this.customerUrl = customerUrl;
     }
 }
